@@ -8,9 +8,9 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name  = "nomprenom-resource-group"
-    storage_account_name = "nomprenomterraformstorage"
-    container_name       = "states"
+    resource_group_name  = "mjansen-resource-group"
+    storage_account_name = "mjansenterraform"
+    container_name       = "terraform-states"
     key                  = "terraform.tfstate"
   }
 }
@@ -25,7 +25,7 @@ provider "azurerm" {
 }
 
 locals {
-  base_name = "nomprenom"
+  base_name = "mjansen"
 }
 
 data "azurerm_client_config" "current" {}

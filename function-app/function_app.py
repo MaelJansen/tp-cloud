@@ -9,9 +9,9 @@ for bp in [users_bp, games_bp]:
     app.register_blueprint(bp)
 
 
-@app.function_name(name="data-collector")
-@app.schedule(schedule="0 0 * * 1", arg_name="timer", run_on_startup=False)
-def rawg_automatic_data_collector(timer: func.TimerRequest) -> None:
+# @app.function_name(name="data-collector")
+# @app.schedule(schedule="0 0 * * 1", arg_name="timer", run_on_startup=False)
+# def rawg_automatic_data_collector(timer: func.TimerRequest) -> None:
     import_rawg_data()
 
 
